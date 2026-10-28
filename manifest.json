@@ -1,0 +1,52 @@
+{
+   "action": {
+      "default_icon": "icons/grey.png",
+      "default_popup": "public/popup/popup.html"
+   },
+   "author": "alexop",
+   "background": {
+      "service_worker": "service-worker-loader.js",
+      "type": "module"
+   },
+   "browser_specific_settings": {
+      "gecko": {
+         "id": "{048bba8c-c62d-4967-963d-d663cae75d3f}"
+      }
+   },
+   "content_scripts": [ {
+      "js": [ "assets/request.js-YczTObJn.js" ],
+      "matches": [ "*://www.roblox.com/*", "*://web.roblox.com/*" ],
+      "run_at": "document_start",
+      "world": "MAIN"
+   }, {
+      "all_frames": true,
+      "css": [ "assets/inject-_kUVq5yN.css" ],
+      "js": [ "assets/inject.js-ryo_DxjW.js" ],
+      "matches": [ "*://www.roblox.com/*", "*://web.roblox.com/*" ],
+      "run_at": "document_start"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "host_permissions": [ "*://*.roblox.com/*", "*://*.rbxcdn.com/*" ],
+   "icons": {
+      "128": "icons/grey_128x128.png",
+      "16": "icons/grey_16x16.png",
+      "48": "icons/grey_48x48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApsaoepbEMREkGBcg1e+OmanJs+m1ODbhe9qHrm5DSsu1D7tYeU+ps7jLYx8McKfEtpnWqhD2Gl1pRHFdojcFdRnxCQ9baqZCdWqilZVs7WDPKWFLiLoSt3f4mWHFgtt1UiM3S9bODCa611pqAr1c4+g0FDWzeAD0g2GEyrBVm2KJ7TD4NqvNazbdq5tel4xy8EmtYisY/Vba2RD83rR51FOBIcUOs6ZPAk/RyZQgCCXx7a5DeaZqGqD77hvr5AZpJl/TB+UXTNsyjy1EAgKot9u9c8HM93ViwHp1MC6j7ah8/z+P3sCGpm6qUEhTuvue9Mp80/FFvYkBndZPFnJ/ZwIDAQAB",
+   "manifest_version": 3,
+   "name": "RoGold - Level Up Roblox",
+   "permissions": [ "storage", "contextMenus", "clipboardWrite", "notifications" ],
+   "short_name": "RoGold",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.9.4",
+   "web_accessible_resources": [ {
+      "matches": [ "*://*/*" ],
+      "resources": [ "svg/*", "images/*.png", "images/*.svg", "retrieveGlobal.js", "useAngular.js", "init.js", "icons/*" ],
+      "use_dynamic_url": false
+   }, {
+      "matches": [ "*://web.roblox.com/*", "*://www.roblox.com/*" ],
+      "resources": [ "assets/request.js-YczTObJn.js", "assets/inject.js-ryo_DxjW.js" ],
+      "use_dynamic_url": false
+   } ]
+}
